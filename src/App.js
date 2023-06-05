@@ -7,13 +7,15 @@ import SideBar from './components/SideBar';
 
 function App() {
   return (
-    <SideBar>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/" element={<DataPage />} />
-        <Route path="/" element={<Settings />} />
-      </Routes>
-    </SideBar>
+    <div className="flex">
+      <SideBar>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<DataPage />} />
+          <Route path="/" element={<Settings />} />
+        </Routes>
+      </SideBar>
+    </div>
   );
 }
 
