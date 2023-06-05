@@ -10,9 +10,9 @@ function App() {
     <div className="flex">
       <SideBar>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/" element={<DataPage />} />
-          <Route path="/" element={<Settings />} />
+          <Route path="/" exact element={<HomePage />} />
+          <Route path="/data" element={<DataPage />} />
+          <Route path="/setting" element={<Settings />} />
         </Routes>
       </SideBar>
     </div>
