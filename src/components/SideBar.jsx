@@ -5,6 +5,7 @@ import * as slIcons from "react-icons/sl";
 import { Link } from 'react-router-dom';
 
 
+
 const menuItems = [
   {
     path: "/",
@@ -30,12 +31,12 @@ const SideBar = () => {
         onClick={() => setOpen(!open)} />
       <ul className='text-stone-200 mt-10'>
         {menuItems.map((item, index) => (
-          <li className="py-3 flex hover:bg-gray-200 hover:rounded hover:duration-300 hover:text-gray-800" key={index}>
-            <Link to={item.path}>
+          <Link to={item.path} key={index}>
+            <li className="py-3 flex hover:bg-gray-200 hover:rounded hover:duration-300 hover:text-gray-800" >
               <span className='pr-3 pt-1 ml-1'>{item.icon}</span>
               <span className={`duration-500 ${!open && 'hidden'}`}>{item.title}</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
         ))}
       </ul>
     </nav>
