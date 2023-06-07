@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { getData } from '../services/getUserData'
 
 const HomePage = () => {
+
+
+
+
   return (
     <div className='flex items-center m-40'>
       <table class="table-auto">
