@@ -12,9 +12,9 @@ const ThemeProvider = ({ children }) => {
 
     return (
         <ThemeContext.Provider value={{ dark, setDark }}>
-            <userDataProvider>
+            <UserDataProvider>
                 {children}
-            </userDataProvider>
+            </UserDataProvider>
         </ThemeContext.Provider>
     )
 }
@@ -26,16 +26,17 @@ export default ThemeProvider
 const UserContext = createContext()
 export const useGetData = () => useContext(UserContext)
 
-export const userDataProvider = ({ children }) => {
+export const UserDataProvider = ({ children }) => {
+    const [userData, setUserData] = useState("")
 
-    useEffect(() => {
+    useEffect(() => { 
         getData().then(res => {
-            console.log(res)
+            setUserData(res.results)
         })
     }, [])
 
     return (
-        <UserContext.Provider>
+        <UserContext.Provider value={{ userData }}>
             {children}
         </UserContext.Provider>
     )

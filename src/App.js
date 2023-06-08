@@ -8,6 +8,7 @@ import { useTheme } from './context';
 
 function App() {
   const theme = useTheme()
+
   return (
     <div className="flex">
       <SideBar />

@@ -24,7 +24,7 @@ const menuItems = [
 const SideBar = () => {
   const [open, setOpen] = useState(true)
   return (
-    <nav className={`bg-dark-purple h-screen p-5 pt-8 ${open ? "w-60" : "w-20"} 
+    <nav className={`bg-dark-purple p-5 pt-8 ${open ? "w-60" : "w-20"} 
     relative duration-300`}>
       <bsIcons.BsArrowLeftCircleFill className={`text-light-white text-3xl 
       cursor-pointer absolute right-3 top-9 ${open && 'duration-1000 rotate-180'}`}
