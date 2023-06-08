@@ -1,10 +1,11 @@
 import { useGetData } from "../context"
+import { useTheme } from '../context';
+
 const HomePage = () => {
   const { userData } = useGetData()
-
-  console.log(userData)
+  const { dark } = useTheme()
   return (
-    <div className='flex items-center m-40'>
+    <div className={`flex items-center m-40 ${dark && "text-gray-300"}`}>
       <table className="table-auto">
         <thead>
           <tr>
